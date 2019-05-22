@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>MEI - Requests</title>
+    <link rel="stylesheet" href="/Styles/styles.css">
+</head>
+<body>
+    <div id="sub_pages">
+        <div id="sub_pages_content">
+            <a href="/Pages/artists_page.html">artists</a>
+            <a href="/Pages/not_rdy_page.html">albums</a>
+            <a href="/Pages/requests_page.html">requests</a>
+            <a href="/Pages/contacts_page.html">contacts</a>
+            <h1>Requests</h1>
+            <br /><br /><br /><br />
+            <p>Please, leave your request and we will find the story!</p>
+            <br /><br />
+                Band: 
+                <input type="text" id ="bandName" name="bandName">
+                <br>
+                Album:
+                <input type="text" id ="albumName" name="albumName">
+                <br><br>
+                <input type="Submit" name="Submit" onclick="SubmitForm()">
+				<div id="successError" ></div>
+        </div>
+    </div> 
+		
+	<script>
+	var successError = document.getElementById("successError");
+	var bandName = document.getElementById("bandName");
+	var albumName = document.getElementById("albumName");
+	
+	function SubmitForm(){
+	if(bandName.value == ""){
+		alert("Band name cannot be empty!");
+		successError.innerHTML = "";
+	}else if(albumName.value == ""){
+		alert("Album name cannot be empty!");
+		successError.innerHTML = "";
+	}else if(!bandName.value.match(/^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$/)){
+		alert("Band name must contain only letters and numbers");
+		successError.innerHTML = "";
+	}else if(!albumName.value.match(/^[A-Za-z0-9 _]*[A-Za-z0-9][A-Za-z0-9 _]*$/)){
+		alert("Album name must contain only letters and numbers");
+		successError.innerHTML = "";
+	}else{
+		successError.innerHTML = "Your request submitted successfully!";
+	}
+	
+	}
+
+	</script>
+</body>
+</html>
