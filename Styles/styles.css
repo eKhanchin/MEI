@@ -1,0 +1,58 @@
+#sub_pages {
+    float: left;
+    position: relative;
+    left: 50%;
+    margin-top: 70px;
+}
+
+#sub_pages_content {
+    float: left;
+    position: relative;
+    left: -50%;
+    font-size: 24px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    margin: 50px;
+}
+
+#main_body {
+    float: left;
+    position: relative;
+    margin-top: 150px;
+}
+
+#main_body_content {
+    float: left;
+    position: relative;
+    text-align: center;
+}
+
+body {
+    background-color: rgb(228, 222, 222);
+    font-family: 'Courier New', Courier, monospace;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img { 
+    width: 100%; 
+  }
+
+.img {
+    float: left;
+    width:  300px;
+    height: 300px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;
+    margin: 10px;
+}
+
+figure {
+    float: left;
+    margin: 10px;
+    text-align: center;
+}
